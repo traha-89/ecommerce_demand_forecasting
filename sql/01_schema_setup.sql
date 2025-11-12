@@ -1,5 +1,5 @@
-###--------------CREATE TABLE TO REPLICATE daily_demand TABLE-----------------------------------------------###
-###--------------CREATE SCHEMA FOR DATA TABLE---------------------------------------------------------------###
+-- --------------CREATE TABLE TO REPLICATE daily_demand TABLE-----------------------------------------------
+-- --------------CREATE SCHEMA FOR DATA TABLE---------------------------------------------------------------
 DROP TABLE IF EXISTS ops_fcst.demand_forecast;
 CREATE TABLE ops_fcst.demand_forecast (
   date DATE,
@@ -20,7 +20,7 @@ CREATE TABLE ops_fcst.demand_forecast (
   
 );
 
-###--------------LOAD DATA FROM CSV TABLE--------------------------------------------------------------------###
+-- --------------LOAD DATA FROM CSV TABLE--------------------------------------------------------------------
 LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/daily_demand.csv' 
 INTO TABLE demand_forecast
 FIELDS TERMINATED BY ','
