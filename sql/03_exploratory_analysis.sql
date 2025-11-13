@@ -116,9 +116,6 @@ SELECT
     ROUND(AVG(customer_care_tickets),2) AS mean_tickets
 FROM demand_forecast
 GROUP BY 1;
-
-# We have higher mean orders and units sold on Monday, Tuesday and Thursdays. Weekends show a lower trend. Highest mean orders are on Tuesday (1072).
-# We observe a similar trend for customer tickets, with the highest mean tickets being raised on Tuesday (115).
 SELECT
     is_weekend,
     ROUND(AVG(orders),2) AS mean_orders,
@@ -127,10 +124,6 @@ SELECT
     ROUND(AVG(customer_care_tickets),2) AS mean_tickets
 FROM demand_forecast
 GROUP BY 1;
-
-# Over weekends, the mean daily orders is 672, vs. 1029 on weekends. Generally we see higher activity during the weekdays.
-# Similarly, we have higher mean daily tickets raised during the weekdays (109).
-
 SELECT
     is_holiday,
     ROUND(AVG(orders),2) AS mean_orders,
@@ -140,9 +133,6 @@ SELECT
 FROM demand_forecast
 GROUP BY 1;
 
-# Over holidays, the mean daily orders is 1145, vs. 921 for non-holidays. Generally we see higher activity during the holidays.
-# Similarly, we have higher mean daily tickets during holidays, when the ordering is more.
-
 SELECT
     is_promotion,
     ROUND(AVG(orders),2) AS mean_orders,
@@ -151,9 +141,6 @@ SELECT
     ROUND(AVG(customer_care_tickets),2) AS mean_tickets
 FROM demand_forecast
 GROUP BY 1;
-
-# As expected, there is a significant spike in mean daily orders during promo (1564) vs. for non-promo 873 mean orders.
-# Similarly, there is a significant increase in mean daily tickets during promo days (216 for promo days).
 
 -- -------------------------------------------------------------------------------------
 -- Calculate monthly and quarterly aggregations
@@ -168,9 +155,6 @@ SELECT
 FROM demand_forecast
 GROUP BY 1;
 
-# Peak Ordering happens from May till August. Highest mean daily orders are in August (1439).
-# We observe similar pattern for tickets, however, the highest mean daily tickets are seen in July (171).
-
 SELECT
     quarter,
     ROUND(AVG(orders),2) AS mean_orders,
@@ -179,9 +163,6 @@ SELECT
     ROUND(AVG(customer_care_tickets),2) AS mean_tickets
 FROM demand_forecast
 GROUP BY 1;
-
-# Peak Ordering happens in the 2nd and 3rd quarter. Highest mean daily orders are in 3rd quarter (1142).
-# Similarly, highest mean daily tickets are seen in the 3rd quarter (123). 
 
 SELECT
     year,
@@ -192,9 +173,34 @@ SELECT
 FROM demand_forecast
 GROUP BY 1;
 
-# Mean daily orders increased from 2023 (875) to 2024 (978), which reflects growing activity from customers. 
-# Accordingly, mean daily tickets also increased from 93 to 103 in 2024.
-
 -- -------------------------------------------------------------------------------------
 -- Identify seasonal trends
 -- -------------------------------------------------------------------------------------
+
+-- Daily Trend
+# We have higher mean orders and units sold on Monday, Tuesday and Thursdays. Weekends show a lower trend. Highest mean orders are on Tuesday (1072).
+# We observe a similar trend for customer tickets, with the highest mean tickets being raised on Tuesday (115).
+
+-- Weekday vs. Weekend Trend
+# Over weekends, the mean daily orders is 672, vs. 1029 on weekends. Generally we see higher activity during the weekdays.
+# Similarly, we have higher mean daily tickets raised during the weekdays (109).
+
+-- Holiday vs. Non-Holiday Trend
+# Over holidays, the mean daily orders is 1145, vs. 921 for non-holidays. Generally we see higher activity during the holidays.
+# Similarly, we have higher mean daily tickets during holidays, when the ordering is more.
+
+-- Promo vs. Non-promo Trend
+# As expected, there is a significant spike in mean daily orders during promo (1564) vs. for non-promo 873 mean orders.
+# Similarly, there is a significant increase in mean daily tickets during promo days (216 for promo days).
+
+-- Monthly Trend
+# Peak Ordering happens from May till August. Highest mean daily orders are in August (1439).
+# We observe similar pattern for tickets, however, the highest mean daily tickets are seen in July (171).
+
+-- Quarterly Trend
+# Peak Ordering happens in the 2nd and 3rd quarter. Highest mean daily orders are in 3rd quarter (1142).
+# Similarly, highest mean daily tickets are seen in the 3rd quarter (123). 
+
+-- Yearly Trend
+# Mean daily orders increased from 2023 (875) to 2024 (978), which reflects growing activity from customers. 
+# Accordingly, mean daily tickets also increased from 93 to 103 in 2024.
