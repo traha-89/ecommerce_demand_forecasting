@@ -1,0 +1,18 @@
+# Core numerical and data handling
+numpy
+pandas
+scipy
+
+# Visualization
+matplotlib
+seaborn
+
+# Time series & forecasting
+statsmodels
+statsforecast
+utilsforecast
+pmdarima
+prophet
+
+# Notebooks / interactive work
+jupyterlab
