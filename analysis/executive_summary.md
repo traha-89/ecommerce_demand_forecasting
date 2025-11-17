@@ -54,7 +54,7 @@ The Prophet model chosen was selected based on its superior accuracy and interpr
 **Selected Model**: Prophet was chosen due to its robust performance in capturing multiple seasonalities, holidays, and the specific impact of promotional events with minimal tuning.
 
 
-![Order Forecast 4 week Comparison](..results/visualizations/Order_Forecast_Comparison_4weeks.png)
+![Order Forecast 4 week Comparison](../results/visualizations/Order_Forecast_Comparison_4weeks.png)
 ## Demand Forecast
 
 The following section summarizes the demand forecast for the next 8 weeks.
