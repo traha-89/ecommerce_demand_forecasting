@@ -87,5 +87,7 @@ Based on the forecast, the following actions are recommended:
 - **Model Assumptions**: The model assumes that past relationships between demand drivers (holidays, weekends) and outcomes (orders, tickets) will hold true for the forecast horizon. For promotions specifically, we have designed the future dataframe to consider the same pattern of promotions as in 2024. However, if we know the promo calendar in advance, we can build that in for a more accurate version of the forecast.
 
 ### Next Steps
-- **Additional Data**: Incorporate data on marketing spend, competitor promotions, and product-specific inventory levels to create more granular and accurate forecasts.
+- **Additional Data**: 
+    - Log Transformation of orders and tickets was skipped owing to time limitation, this could further be explored, particularly for Prophet model as it is easier to adapt.
+    - Incorporate data on product types, competitor promotions, geography and product-specific inventory levels to create more granular and accurate forecasts.
 - **Follow-up Analysis**: Conduct A/B testing on staffing levels during a promotional period to validate the forecast's impact and refine resource allocation models. A deeper dive into the drivers of `units_sold` vs. `orders` could also yield valuable insights into customer purchasing behavior.
