@@ -98,38 +98,38 @@ These scripts are designed to be run against your analytical database (e.g. I ha
 ## Core Python Imports
 
 The main notebook relies on the following imports:
-**Paths and core libs**
-from pathlib import Path
-import os
-import numpy as np
-import pandas as pd
-import datetime as dt
-from pandas.tseries.offsets import DateOffset
-from scipy import stats
-import warnings
-warnings.filterwarnings('ignore')
+**Paths and core libs**  
+- from pathlib import Path
+- import os
+- import numpy as np
+- import pandas as pd
+- import datetime as dt
+- from pandas.tseries.offsets import DateOffset
+- from scipy import stats
+- import warnings
+- warnings.filterwarnings('ignore')
 
-**Display config**
-pd.set_option('display.max_columns', None)
+**Display config**  
+- pd.set_option('display.max_columns', None)
 
 **Visualization**
-import matplotlib.pyplot as plt
-import seaborn as sns
-from utilsforecast.plotting import plot_series
+- import matplotlib.pyplot as plt
+- import seaborn as sns
+- from utilsforecast.plotting import plot_series
 
 **Forecasting**
-from statsforecast import StatsForecast
-from statsforecast.models import SeasonalNaive, AutoARIMA
-import pmdarima as pm
-from functools import partial
-from prophet import Prophet
-from prophet.plot import add_changepoints_to_plot
-from prophet.diagnostics import cross_validation, performance_metrics
+- from statsforecast import StatsForecast
+- from statsforecast.models import SeasonalNaive, AutoARIMA
+- import pmdarima as pm
+- from functools import partial
+- from prophet import Prophet
+- from prophet.plot import add_changepoints_to_plot
+- from prophet.diagnostics import cross_validation, performance_metrics
 
 **Forecast evaluation**
-from statsmodels.tsa.seasonal import seasonal_decompose
-from utilsforecast.evaluation import evaluate
-from utilsforecast.losses import mae, mse, rmse, mape, smape, mase, scaled_crps
+- from statsmodels.tsa.seasonal import seasonal_decompose
+- from utilsforecast.evaluation import evaluate
+- from utilsforecast.losses import mae, mse, rmse, mape, smape, mase, scaled_crps
 
 If any import fails, confirm that the corresponding library is listed in `requirements.txt` and reinstall.
 
