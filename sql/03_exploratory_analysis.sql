@@ -182,7 +182,7 @@ GROUP BY 1;
 # We observe a similar trend for customer tickets, with the highest mean tickets being raised on Tuesday (115).
 
 -- Weekday vs. Weekend Trend
-# Over weekends, the mean daily orders is 672, vs. 1029 on weekends. Generally we see higher activity during the weekdays.
+# Over weekends, the mean daily orders is 672, vs. 1029 on weekdays. Generally we see higher activity during the weekdays.
 # Similarly, we have higher mean daily tickets raised during the weekdays (109).
 
 -- Holiday vs. Non-Holiday Trend
