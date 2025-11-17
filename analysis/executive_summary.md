@@ -55,7 +55,7 @@ The Prophet model chosen was selected based on its superior accuracy and interpr
 
 
 ![Order Forecast 4 week Comparison](../results/visualizations/Order_Forecast_Comparison_4weeks.png)
-![Tickets Forecast 4 week Comparison](../results/visualizations/Order_Forecast_Comparison_4weeks.png)
+![Tickets Forecast 4 week Comparison](../results/visualizations/Tickets_Forecast_Comparison_4weeks.png)
 
 ## Demand Forecast
 
