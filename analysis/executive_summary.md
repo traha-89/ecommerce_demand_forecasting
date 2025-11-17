@@ -55,16 +55,16 @@ The Prophet model chosen was selected based on its superior accuracy and interpr
 
 
 ![Order Forecast 4 week Comparison](../results/visualizations/Order_Forecast_Comparison_4weeks.png)
+![Tickets Forecast 4 week Comparison](../results/visualizations/Order_Forecast_Comparison_4weeks.png)
+
 ## Demand Forecast
 
 The following section summarizes the demand forecast for the next 8 weeks.
 
 ### Forecast Visualizations
 
-<!-- Replace the lines below with your actual forecast images -->
-<!-- Example: ![4-Week Order Forecast](path/to/your/image.png) -->
-`[Image of 4, 6, and 8-week order forecast]`
-`[Image of 4, 6, and 8-week customer care ticket forecast]`
+![Final Order Forecast next 8 weeks](../results/visualizations/Order_Forecast_8week_published.png)
+![Final Tickets Forecast next 8 weeks](../results/visualizations/Tickets_Forecast_8week_published.png)
 
 ### Expected Demand
 - Based on the next 4, 6 and 8 weeks forecast for orders and tickets. We are not expecting to see a surge in orders for the next 8 weeks, primarily as there are no expected promotions or holidays.
