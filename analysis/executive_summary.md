@@ -24,6 +24,7 @@ The analysis is based on the `daily_demand.csv` dataset, which contains 730 days
 - **[Holiday Impact]**: Generally, holidays have a positive impact on both orders and customer tickets. The mean daily orders is 1145, vs. 921 for non-holidays. However, there is a noticeable decline in order volumes and tickets during Christmas, which was hard to forecast for based on 2 years of data. This part of the forecast could be further optimized with more data and feature engineering.
 - **[Weekend Impact]**: We find that weekends usually have a negative impact on both order volumes and customer tickets. Over weekends, the mean daily orders is 672, vs. 1029 on weekdays. 
 - **[Trends and Seasonality]**: We observed based on our forecast components, that we usually have higher orders on Tuesday and Saturday compared to other days, and similarly for customer tickets. Across the months, as we saw a heavy promo period in July each year, Peak Ordering happens from May till August. Overall, from 2023 till 2024, we have seen an increasing trend for order volumes and customer tickets, which is a positive sign for the business, but also calls for optimized capacity and productivity increase.
+- **[Units Sold and Revenue]**: We didn't find a significant improvement in the forecast additionally considering these variables as features, and they seem to be highly collinear to orders and tickets. This can be explored further on if there's an opportunity to utilize.
 
 ## Model Performance Summary
 
@@ -52,6 +53,8 @@ The Prophet model chosen was selected based on its superior accuracy and interpr
 
 **Selected Model**: Prophet was chosen due to its robust performance in capturing multiple seasonalities, holidays, and the specific impact of promotional events with minimal tuning.
 
+`[Order Forecast 4 week comoparison]`
+![Order Forecast Comparison_4weeks](results/visualizations/Order Forecast Comparison_4weeks.png)
 ## Demand Forecast
 
 The following section summarizes the demand forecast for the next 8 weeks.
@@ -75,13 +78,13 @@ Based on the forecast, the following actions are recommended:
 - **Customer Care**: Evaluate reduction of temporary agent staffing during the upcoming 8 weeks, considering January and February are relatively less stressful operationally.
 - **Inventory & Fulfillment**: Reduce temporary workforce based on operational efficiency if possible, for warehouse staff involved in picking and packing.
 - **Logistics Capacity Requirement**: Align with logistics partners to adjust capacity requirement for the upcoming low volume months.
-- **Business Impact**: The upcoming recommendations are aimed at cutting costs during low operations months to ensure profitability.
+- **Business Impact**: The upcoming recommendations, on high level are aimed at cutting costs during low operations months to ensure profitability.
 
 ## Limitations & Next Steps
 
 ### Limitations
-- **Data Quality**: The `is_promotion` flag is binary and does not differentiate between minor and major promotional events, which may limit forecast accuracy.
-- **Model Assumptions**: The model assumes that past relationships between demand drivers (holidays, weekends) and outcomes (orders, tickets) will hold true for the forecast horizon.
+- **Data Quality**: We observed 13 order outliers using the IQR Approach, some of which were in the range of 3000-4000 and were not explained by holidays, promos etc. For these we can further investigate if there could be additional reasons, or they might be incorrect values.  
+- **Model Assumptions**: The model assumes that past relationships between demand drivers (holidays, weekends) and outcomes (orders, tickets) will hold true for the forecast horizon. For promotions specifically, we have designed the future dataframe to consider the same pattern of promotions as in 2024. However, if we know the promo calendar in advance, we can build that in for a more accurate version of the forecast.
 
 ### Next Steps
 - **Additional Data**: Incorporate data on marketing spend, competitor promotions, and product-specific inventory levels to create more granular and accurate forecasts.
