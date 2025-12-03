@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains a demand forecasting case study for a mid-size e‑commerce business.  
+This repository contains a demand forecasting analysis for a mid-size e‑commerce business.  
 The goal is to build, evaluate, and interpret forecasting models to support operational decisions in customer care, inventory, and fulfillment.  
 
 The main analysis is implemented in Python notebooks, supported by SQL scripts for data exploration or transformation.
