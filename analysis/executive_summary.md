@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This repository contains the analysis and forecasting models and published for an e-commerce company aiming to optimize its customer care and fulfillment operations. By leveraging two years of historical data, this project develops demand forecasts for key metrics over 4, 6, and 8-week horizons. The primary goal is to provide actionable insights for staffing, inventory management, and warehouse capacity planning.
+This repository contains the analysis and forecasting models published for an e-commerce company aiming to optimize its customer care and fulfillment operations. By leveraging two years of historical data, this project develops demand forecasts for key metrics over 4, 6, and 8-week horizons. The primary goal is to provide actionable insights for staffing, inventory management, and warehouse capacity planning.
 
 ## Data
 
